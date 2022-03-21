@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["esnext"],
+    "moduleResolution": "node",
+    "baseUrl": "./"
+  },
+  "include": ["./"],
+  "exclude": [
+    "node_modules",
+    "**/__snapshots__/*",
+    "**/*.snap",
+    "**/*.test.jsx?"
+  ]
+}
