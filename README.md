@@ -32,6 +32,9 @@ It will output the result in the `html` folder, which you can preview in your br
 
 `new Graph([root, root2, ...]])`
 
+<img width="395" alt="Screenshot 2022-03-22 at 23 15 25" src="https://user-images.githubusercontent.com/4820803/159591622-665ca12a-1dda-4553-9435-87217bf5aea8.png">
+
+
 ## Mermaid
 
 check the offical documentation here: https://mermaid-js.github.io/mermaid/#/
