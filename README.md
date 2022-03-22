@@ -11,21 +11,26 @@ yarn install
 
 ```
 
-You can now tritonise your Triton files like this example:
+You can now render in a variety of outputs your Triton diagrams like this example:
 
 ```
-yarn tritonise examples/myDatabase.ts
+ts-node examples/myDatabase.ts
 
 ```
 
 It will output the result in the `html` folder, which you can preview in your browser!
 
-<img width="397" alt="Screenshot 2022-03-21 at 22 40 23" src="https://user-images.githubusercontent.com/4820803/159374767-eda88b2b-b28e-47eb-be0f-1baffe188026.png">
-
-
 ## Available diagrams
 
-- ER
+### ER
+
+`new ER([link, link2, ...]])`
+
+<img width="397" alt="Screenshot 2022-03-21 at 22 40 23" src="https://user-images.githubusercontent.com/4820803/159374767-eda88b2b-b28e-47eb-be0f-1baffe188026.png">
+
+### Graph
+
+`new Graph([root, root2, ...]])`
 
 ## Mermaid
 

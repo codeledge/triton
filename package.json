@@ -1,8 +1,9 @@
 {
   "name": "triton",
+  "description": "Javascript powered Mermaid diagrams",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tritonise": "ts-node"
+    "t": "ts-node"
   },
   "dependencies": {},
   "devDependencies": {
