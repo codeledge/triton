@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myUserGraph</title>
+  </head>
+  <body>
+    <a href="./">Go back</a>
+    <div class="mermaid">graph
+	1["Visitor"]
+	2["Joe"] --> 3["Hot Post"]
+	3["Hot Post"] --> 5["Nice Comment"]
+	5["Nice Comment"] --> 6["First Like"]
+	5["Nice Comment"] --> 7["Second Like"]
+	2["Joe"] -->|has| 4["Another Post"]
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  </body>
+</html>
