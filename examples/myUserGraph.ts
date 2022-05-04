@@ -1,6 +1,6 @@
 import { Graph } from "../src/graphs/Graph";
 import { Node } from "../src/classes/Entity";
-import mermaid from "mermaid";
+//import mermaid from "mermaid"; //ESM not working!
 
 const LonelyUser = new Node({ name: "Visitor" });
 const User = new Node({ name: "Joe" });
@@ -21,5 +21,5 @@ new Graph([LonelyUser, User]).toHtml("myUserGraph", {
   showVerb: true,
   fontFamily: "Courier New",
   darkMode: true,
-  theme: mermaid.mermaidAPI.Theme.Default,
+  //theme: mermaid.mermaidAPI.Theme.Default,
 });
