@@ -1,6 +1,7 @@
-import { Node, Rel, Verbs } from "src/classes/Entity";
 import * as fs from "fs";
 import * as path from "path";
+import { Node, Verbs } from "src/classes/Entity";
+import mermaidAPI from "mermaid/mermaidAPI";
 
 type MmdOptions = {
   traverseByVerb?: Verbs | Verbs[];
@@ -64,7 +65,7 @@ export class Graph {
     return mmdString;
   }
 
-  toHtml(title: string, options: ToHtmlOptions = {}) {
+  toHtml(title: string, options: ToHtmlOptions & mermaidAPI.Config = {}) {
     let template = fs.readFileSync(
       path.resolve(__dirname, "../templates/mmd.html"),
       "utf8"
@@ -72,7 +73,8 @@ export class Graph {
 
     let data = template
       .replace("MMD_TITLE", title)
-      .replace("MMD_CONTENT", this.toMmd(options));
+      .replace("MMD_CONTENT", this.toMmd(options))
+      .replace("MMD_OPTIONS", JSON.stringify(options));
 
     fs.writeFileSync(
       path.resolve(__dirname, `../../html/${options.fileName || title}.html`),
