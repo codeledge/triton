@@ -1,7 +1,6 @@
 import { Graph } from "../src/graphs/Graph";
 import { Node } from "../src/classes/Entity";
 import mermaid from "mermaid";
-const { mermaidAPI } = mermaid;
 
 const LonelyUser = new Node({ name: "Visitor" });
 const User = new Node({ name: "Joe" });
@@ -18,12 +17,9 @@ Post1.link(Comment1);
 Comment1.link(Comment1Like1);
 Comment1.link(Comment1Like2);
 
-new Graph([LonelyUser, User]).toHtml(
-  "myUserGraph",
-  { showVerb: true },
-  {
-    fontFamily: "Courier New",
-    darkMode: true,
-    theme: mermaidAPI.Theme.Default,
-  }
-);
+new Graph([LonelyUser, User]).toHtml("myUserGraph", {
+  showVerb: true,
+  fontFamily: "Courier New",
+  darkMode: true,
+  theme: mermaid.mermaidAPI.Theme.Default,
+});
